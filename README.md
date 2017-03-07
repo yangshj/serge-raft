@@ -1,6 +1,7 @@
 # serge-raft
-raft协议--java版
-造轮子
+raft协议--java版  研发中……
+
+造轮子系列
 
 serge-raft技术详解：
 
