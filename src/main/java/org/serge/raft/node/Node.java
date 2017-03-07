@@ -2,7 +2,7 @@ package org.serge.raft.node;
 
 /**
  * 节点
- * @author lenovo
+ * @author yangshj
  *
  */
 public class Node {

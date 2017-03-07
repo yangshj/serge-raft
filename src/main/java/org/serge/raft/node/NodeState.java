@@ -9,14 +9,14 @@ package org.serge.raft.node;
  * Nodes will reply with their vote
  * The candidate becomes the leader if it gets votes from a majority of nodes
  * This process is called Leader Election.
- * @author lenovo
+ * @author yangshj
  *
  */
 public enum NodeState {
 	 /**领导人*/
-    Leader(),//
+    Leader,//
     /**追随者*/
-    Follower(),//
+    Follower,//
     /**候选人*/
-    Candidate(),
+    Candidate,
 }

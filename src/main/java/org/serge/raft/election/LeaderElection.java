@@ -9,7 +9,7 @@ package org.serge.raft.election;
  * This process is called Leader Election.
  * All changes to the system now go through the leader.
  * Each change is added as an entry in the node's log.
- * @author lenovo
+ * @author yangshj
  *
  */
 public class LeaderElection {
