@@ -1,2 +1,3 @@
-Raft
-造轮子
+# serge-raft
+raft协议--java版
+造轮子系列
