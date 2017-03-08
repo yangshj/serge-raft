@@ -1,28 +1,20 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <config xmlns="">
-	<raft>
-		<ip>127.0.0.1</ip>
-		<port>7001</port>
-		<state>Follower</state>
-	</raft>
-	<raft>
-		<ip>127.0.0.1</ip>
-		<port>7002</port>
-		<state>Follower</state>
-	</raft>
-	<raft>
-		<ip>127.0.0.1</ip>
-		<port>7003</port>
-		<state>Follower</state>
-	</raft>
-	<raft>
-		<ip>127.0.0.1</ip>
-		<port>7004</port>
-		<state>Follower</state>
-	</raft>
-	<raft>
-		<ip>127.0.0.1</ip>
-		<port>7005</port>
-		<state>Follower</state>
-	</raft>
+	<!-- RSF对外提供服务的IP -->
+    <ip>127.0.0.1</ip>
+    <!-- RSF对外提供服务的服务端口 -->
+    <port>7001</port>
+    <!-- 工作状态,默认:Follower -->
+    <state>Follower</state>
+    <!-- 服务器ID -->
+    <id>server_1</id>
+    <!-- 集群服务器列表 -->
+    <servers>
+        server_1:127.0.0.1:7001,
+        server_2:127.0.0.1:7002,
+        server_3:127.0.0.1:7003,
+        server_4:127.0.0.1:7004,
+        server_5:127.0.0.1:7005,
+        server_6:127.0.0.1:7006
+    </servers>
 </config>
