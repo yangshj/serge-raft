@@ -7,8 +7,7 @@ import java.util.Map;
 
 import org.dom4j.Document;
 import org.dom4j.DocumentHelper;
-import org.dom4j.Element;
-import org.serge.raft.config.Raft;  
+import org.dom4j.Element;  
 
 
 
@@ -146,17 +145,4 @@ public class XmlUtil {
         return null;  
     }   
     
-    public static void main(String[] args) {
-		String xml = "<xml>"+
-				""+
-//				"<raft>"+
-					"<ip>127.0.0.1</ip>"+
-					"<port>7001</port>"+
-					"<state>Follower</state>"+
-//				"</raft>"+
-				"</xml>";
-//		RaftConfig c = (RaftConfig) xmlStrToBean(xml, RaftConfig.class);
-		Raft c = (Raft) xmlStrToBean(xml, Raft.class);
-		System.out.println(c);
-	}
 }
