@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<config xmlns="">
+	<raft>
+		<ip>127.0.0.1</ip>
+		<port>7001</port>
+		<state>Follower</state>
+	</raft>
+	<raft>
+		<ip>127.0.0.1</ip>
+		<port>7002</port>
+		<state>Follower</state>
+	</raft>
+	<raft>
+		<ip>127.0.0.1</ip>
+		<port>7003</port>
+		<state>Follower</state>
+	</raft>
+	<raft>
+		<ip>127.0.0.1</ip>
+		<port>7004</port>
+		<state>Follower</state>
+	</raft>
+	<raft>
+		<ip>127.0.0.1</ip>
+		<port>7005</port>
+		<state>Follower</state>
+	</raft>
+</config>
