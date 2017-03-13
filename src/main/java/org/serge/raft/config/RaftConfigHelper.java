@@ -19,7 +19,7 @@ public class RaftConfigHelper {
 	 */
 	public static RaftConfig getRaft(){
 		URL url = Thread.currentThread().getContextClassLoader().getResource("");
-		String xmlPath = url.getFile() + Constant.fileName;
+		String xmlPath = url.getFile() + Constant.configFileName;
 		String xml = ReadFileUtil.readTxtFromFile(xmlPath);
 		RaftConfig raft = xmlToRaft(xml);
 		return raft;

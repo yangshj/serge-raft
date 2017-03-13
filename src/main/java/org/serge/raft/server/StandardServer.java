@@ -53,4 +53,9 @@ public class StandardServer implements Server, Lifecycle, Runnable{
 		}
 	}
 
+	public void initialize() {
+		// TODO Auto-generated method stub
+		
+	}
+
 }

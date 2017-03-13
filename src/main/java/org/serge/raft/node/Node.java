@@ -14,6 +14,14 @@ public class Node {
 	public Node(){
 		state = NodeState.Follower;
 	}
+
+
+	public NodeState getState() {
+		return state;
+	}
+	public void setState(NodeState state) {
+		this.state = state;
+	}
 	
 	
 }

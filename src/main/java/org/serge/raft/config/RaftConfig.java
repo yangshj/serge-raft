@@ -8,7 +8,7 @@ package org.serge.raft.config;
 public class RaftConfig {
 	
 	private String ip;
-	private String port;
+	private String clientPort;
 	private String state;
 	private String id;
 	private String servers;
@@ -18,12 +18,6 @@ public class RaftConfig {
 	}
 	public void setIp(String ip) {
 		this.ip = ip;
-	}
-	public String getPort() {
-		return port;
-	}
-	public void setPort(String port) {
-		this.port = port;
 	}
 	public String getState() {
 		return state;
@@ -43,4 +37,11 @@ public class RaftConfig {
 	public void setServers(String servers) {
 		this.servers = servers;
 	}
+	public String getClientPort() {
+		return clientPort;
+	}
+	public void setClientPort(String clientPort) {
+		this.clientPort = clientPort;
+	}
+	
 }

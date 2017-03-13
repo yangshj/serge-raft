@@ -7,4 +7,7 @@ public interface Lifecycle {
 	
 	/** 停止服务 */
 	public void stop() throws LifecycleException;
+	
+	/** 初始化 */
+	public void initialize() throws LifecycleException;
 }

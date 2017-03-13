@@ -12,6 +12,9 @@ package org.serge.raft.election;
  * @author yangshj
  *
  */
-public class LeaderElection {
+public interface LeaderElection {
+	
+	/** 添加监听器 */
+	public void addListener(MessageListener event);
 
 }

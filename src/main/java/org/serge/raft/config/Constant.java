@@ -7,5 +7,6 @@ package org.serge.raft.config;
  */
 public class Constant {
 	
-	public static final String fileName = "raft.xml";
+	//配置文件名称
+	public static final String configFileName = "raft.xml";
 }

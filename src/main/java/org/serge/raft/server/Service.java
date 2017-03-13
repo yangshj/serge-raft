@@ -6,6 +6,5 @@ public interface Service {
 	
 	public void setServer(Server server);
 	
-	public void initialize();
 	
 }
