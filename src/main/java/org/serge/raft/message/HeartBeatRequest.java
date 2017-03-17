@@ -1,6 +1,4 @@
-package org.serge.raft.heartbeat;
-
-import org.serge.raft.election.MessageType;
+package org.serge.raft.message;
 
 /**
  * 心跳请求

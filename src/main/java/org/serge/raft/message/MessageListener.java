@@ -1,4 +1,4 @@
-package org.serge.raft.election;
+package org.serge.raft.message;
 
 /**
  * 消息事件监听器

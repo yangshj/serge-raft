@@ -7,12 +7,22 @@ package org.serge.raft.config;
  */
 public class RaftConfig {
 	
-	private String ip;
-	private String clientPort;
-	private String state;
+	/** 服务ID */
 	private String id;
+	/** 服务ip */
+	private String ip;
+	/** 客户端连接服务端的端口  */
+	private String clientPort;
+	/** 选举用端口 */
+	private String electionPort;
+	/** 日志数据用端口 */
+	private String logPort;
+	/** 服务状态 */
+	private String state;
+	/** 服务列表 */
 	private String servers;
 	
+	///////////////////////////////////////////
 	public String getIp() {
 		return ip;
 	}
@@ -42,6 +52,18 @@ public class RaftConfig {
 	}
 	public void setClientPort(String clientPort) {
 		this.clientPort = clientPort;
+	}
+	public String getElectionPort() {
+		return electionPort;
+	}
+	public void setElectionPort(String electionPort) {
+		this.electionPort = electionPort;
+	}
+	public String getLogPort() {
+		return logPort;
+	}
+	public void setLogPort(String logPort) {
+		this.logPort = logPort;
 	}
 	
 }

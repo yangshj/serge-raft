@@ -4,6 +4,10 @@
     <ip>127.0.0.1</ip>
     <!-- 客户端连接服务端的端口 -->
     <clientPort>6001</clientPort>
+    <!-- 选举端口 -->
+    <electionPort>7001</electionPort>
+    <!-- 日志数据端口 -->
+    <logPort>8001</logPort>
     <!-- 工作状态，默认:Follower -->
     <state>Follower</state>
     <!-- 服务器ID -->

@@ -4,15 +4,15 @@ import java.util.ArrayList;
 import java.util.List;
 import java.util.Random;
 
-import org.serge.raft.heartbeat.HeartBeatRequest;
-import org.serge.raft.heartbeat.IHeartBeat;
-import org.serge.raft.heartbeat.StandardHeartBeat;
+import org.serge.raft.config.RaftConfigHelper;
+import org.serge.raft.message.HeartBeatRequest;
+import org.serge.raft.message.MessageListener;
 import org.serge.raft.node.Node;
 import org.serge.raft.node.NodeState;
 import org.serge.raft.server.Lifecycle;
 import org.serge.raft.server.LifecycleException;
 
-public class StandardLeaderElection implements LeaderElection, Runnable, Lifecycle{
+public class StandardLeaderElection implements ILeaderElection, Runnable, Lifecycle{
 	
 	/**  组件是否已经启动  */
 	private boolean started = false;
@@ -31,7 +31,7 @@ public class StandardLeaderElection implements LeaderElection, Runnable, Lifecyc
 		// 初始化事件监听器列表
 		this.listeners = new ArrayList<MessageListener>();
 		// 初始化节点，默认 Follower
-		this.node = new Node();
+		this.node = new Node(RaftConfigHelper.getRaft());
 		this.threadName = "选举线程";
 		this.electionTimeout = genElectionTimeout();
 	}
@@ -45,10 +45,10 @@ public class StandardLeaderElection implements LeaderElection, Runnable, Lifecyc
 		threadStart(); 
 	}
 	
-	//TODO 自己能不能投给自己，3个节点宕掉一个以后，还能不能选出leader（能）
+	IHeartBeat hearBeat = new StandardHeartBeat();
+	
 	public void run(){
 		while(started){
-			IHeartBeat hearBeat = new StandardHeartBeat();
 			// 领导者 发送心跳包给集群中的节点
 			if(node.getState()==NodeState.Leader){
 				hearBeat.sendHeartBeat(new HeartBeatRequest());

@@ -1,4 +1,7 @@
-package org.serge.raft.heartbeat;
+package org.serge.raft.election;
+
+import org.serge.raft.message.HeartBeatRequest;
+import org.serge.raft.message.HeartBeatResponse;
 
 /**
  * 心跳接口

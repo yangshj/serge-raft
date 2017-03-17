@@ -1,20 +1,22 @@
-package org.serge.raft.heartbeat;
+package org.serge.raft.message;
 
 /**
- * 心跳响应
+ * 投票响应类
  * @author yangshj
  *
  */
-public class HeartBeatResponse {
+public class VoteResponse {
 	
 	/** 候选人 ServerID */
 	private String serverID = null;
 	/** 候选人当前 term 值 */
     private String term = null; 
-	private boolean reuslt;
+	/** 投票结果 */
+	private boolean result;
 	
 	
-	///////////////////////////////////////////
+	
+	//////////////////////////////////////
 	public String getServerID() {
 		return serverID;
 	}
@@ -27,11 +29,11 @@ public class HeartBeatResponse {
 	public void setTerm(String term) {
 		this.term = term;
 	}
-	public boolean isReuslt() {
-		return reuslt;
+	public boolean isResult() {
+		return result;
 	}
-	public void setReuslt(boolean reuslt) {
-		this.reuslt = reuslt;
+	public void setResult(boolean result) {
+		this.result = result;
 	}
 	
 }

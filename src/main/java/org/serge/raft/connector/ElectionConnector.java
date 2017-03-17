@@ -74,7 +74,7 @@ public class ElectionConnector implements IConnector, Lifecycle, Runnable{
 			try {
 				socket = serverSocket.accept();
 				// 处理选举，心跳
-				Processer.processElection(socket);
+				Processer.process(socket);
 			}catch(Exception e){
 				e.printStackTrace();
 			}

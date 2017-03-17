@@ -1,5 +1,7 @@
 package org.serge.raft.election;
 
+import org.serge.raft.message.MessageListener;
+
 /**
  * 领导人选举
  * If followers don't hear from a leader then they can become a candidate
@@ -12,7 +14,7 @@ package org.serge.raft.election;
  * @author yangshj
  *
  */
-public interface LeaderElection {
+public interface ILeaderElection {
 	
 	/** 添加监听器 */
 	public void addListener(MessageListener event);

@@ -1,22 +1,20 @@
-package org.serge.raft.election;
+package org.serge.raft.message;
 
 /**
- * 投票响应类
+ * 心跳响应
  * @author yangshj
  *
  */
-public class VoteResponse {
+public class HeartBeatResponse {
 	
 	/** 候选人 ServerID */
 	private String serverID = null;
 	/** 候选人当前 term 值 */
     private String term = null; 
-	/** 投票结果 */
 	private boolean result;
 	
 	
-	
-	//////////////////////////////////////
+	///////////////////////////////////////////
 	public String getServerID() {
 		return serverID;
 	}

@@ -1,4 +1,4 @@
-package org.serge.raft.election;
+package org.serge.raft.message;
 
 /**
  * 消息（心跳，选举，日志）

@@ -1,7 +1,6 @@
 package org.serge.raft.connector;
 
 import java.io.IOException;
-import java.io.InputStream;
 import java.net.InetAddress;
 import java.net.ServerSocket;
 import java.net.Socket;
@@ -75,7 +74,7 @@ public class ClientConnector implements IConnector, Lifecycle, Runnable{
 			try {
 				socket = serverSocket.accept();
 				// 处理客户端请求
-				Processer.processClient(socket);
+				Processer.process(socket);
 			}catch(Exception e){
 				e.printStackTrace();
 			}

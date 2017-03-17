@@ -1,7 +1,6 @@
 package org.serge.raft.connector;
 
 import java.io.IOException;
-import java.io.InputStream;
 import java.net.InetAddress;
 import java.net.ServerSocket;
 import java.net.Socket;
@@ -11,7 +10,12 @@ import org.serge.raft.config.RaftConfig;
 import org.serge.raft.config.RaftConfigHelper;
 import org.serge.raft.server.Lifecycle;
 import org.serge.raft.server.LifecycleException;
-
+ 
+/**
+ * 日志等数据用连接器
+ * @author yangshj
+ *
+ */
 public class LogConnector implements IConnector, Lifecycle, Runnable{
 	
 	/** 监听端口 */
@@ -70,7 +74,7 @@ public class LogConnector implements IConnector, Lifecycle, Runnable{
 			try {
 				socket = serverSocket.accept();
 				// 处理日志请求
-				Processer.processClient(socket);
+				Processer.process(socket);
 			}catch(Exception e){
 				e.printStackTrace();
 			}
